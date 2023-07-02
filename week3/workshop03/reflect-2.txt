@@ -1,0 +1,78 @@
+///////////////////////////////////////////////////////////////////////////
+                              Reflection
+                          Workshop - #3 (P2)
+Full Name  : Vinicius Hayden Souza da Silva
+Student ID#: 135067221
+Email      : vhsouza-da-silva@myseneca.ca
+Section    : NCC
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+
+1. 
+  printf("Enter how you like your coffee...\n");
+       printf("\n");
+       printf("Coffee strength ([L]ight, [M]edium, [R]ich): ");
+       scanf(" %c", &user_coffee_type1);
+       user_coffee_type1 = tolower(user_coffee_type1);  // Convert to lowercase
+
+       printf("Do you like your coffee with cream ([Y]es,[N]o): ");
+       scanf(" %c", &user_option1);
+       user_option1 = tolower(user_option1);  // Convert to lowercase
+
+       printf("Typical number of daily servings: ");
+       scanf("%d", &daily_servings1);
+       printf("\n");
+       printf("The below table shows how your preferences align to the available products:\n");
+       printf("\n");
+    printf("--------------------+-------------+-------+\n");
+    printf("  |     Coffee      |  Packaged   | With  |\n");
+    printf("ID|      Type       | Bag Weight  | Cream |\n");
+    printf("--+-----------------+-------------+-------+\n");
+    printf("1 |       %d         |      %d      |   %d   |\n",
+           user_coffee_type1 == coffee1_type, daily_servings1 >= 1 && daily_servings1 <= 4,
+           coffee1_option == user_option1);
+    printf("2 |       %d         |      %d      |   %d   |\n",
+           user_coffee_type1 == coffee2_type, daily_servings1 >= 5 && daily_servings1 <= 9,
+           coffee2_option == user_option1);
+    printf("3 |       %d         |      %d      |   %d   |\n",
+           user_coffee_type1 == coffee3_type, daily_servings1 >= 10,
+           coffee3_option == user_option1);
+
+A) I used only one. ==. usercoffe1_type1 == coffee1_type, to check if the user input is the same as the assigned earlier and using lowercase to allow compairing it.
+coffee2_option == user_option1
+coffee3_option == user_option1
+
+B) I used three, >=, && and <=. 
+daily_servings1 >= 1 && daily_servings1 <= 4
+daily_servings1 >= 5 && daily_servings1 <= 9
+daily_servings1 >= 10
+To compare the daily servings to the given index, in order to fit the range I used >=, && and <=.
+
+2. PRODUCT2_TAXED == 'N' && PRODUCT3_TAXED == 'N' (not using deMorgans'law) and !(PRODUCT2_TAXED == 'N') || !(PRODUCT3_TAXED == 'N') (using deMorgan's law). I used the first one.
+
+3. The first one would be grouping the variables to coffee products together, and related to the user preferences together :
+
+int coffee1_weight_bag, coffee2_weight_bag, coffee3_weight_bag;
+char coffee1_type, coffee2_type, coffee3_type;
+char coffee1_option, coffee2_option, coffee3_option;
+
+int daily_servings1, daily_servings2;
+char user_coffee_type1, user_coffee_type2;
+char user_option1, user_option2;
+
+The second one would be to organize by their data type and the character variables as well together, 
+int coffee1_weight_bag, coffee2_weight_bag, coffee3_weight_bag;
+int daily_servings1, daily_servings2;
+
+char coffee1_type, coffee2_type, coffee3_type;
+char coffee1_option, coffee2_option, coffee3_option;
+char user_coffee_type1, user_coffee_type2;
+char user_option1, user_option2;
+
+Basically, using either of these methods makes the code easier to deal with and helps us understand how the data is stored. It's up to you to decide which approach to use based on what you need for your program.
+

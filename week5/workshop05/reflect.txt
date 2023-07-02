@@ -1,0 +1,15 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #5
+Full Name  :  Vinicius Hayden Souza da Silva
+Student ID#:  135067221
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. For two main and important reasons. The first one is that magic number doesn't mean anything, it's just a number. In programming, it's always a good idea to name variables in order for your code to be organized, and if you just write a number, of course you mean something when put it on your solution, but it is not readable and that is the second point. For a better maintability, if for some reason you want to change the number you would have to go to every statement that the number is variable. If you declare it as a macro, you just change it one time and it becomes so much more simpler. 
+
+2. Because if the average were to be inside the validation since it's a loop, it would change everytime the user makes a typo for example. In that case, the average would have a completely different value. There's also the reason that if in order to have a better maintability, the average is only calculated after the authentications, so it's a lot easier to both read and also change anything if needed.
